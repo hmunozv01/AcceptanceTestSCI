@@ -1,0 +1,228 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>
+
+</title><link rel="stylesheet" type="text/css" media="all" href="../../cmm/sty/Dtree.css" />
+    <script type="text/javascript" src="../../cmm/scr/Dtree.js"></script>
+    <script type="text/javascript" src="../../com/mantenedor/jquery.js"></script>
+    <script type="text/javascript">
+        function solicitar() {
+            top.document.getElementById("cen").cols = "32,*";
+        }
+        function visibilidad() {
+            var tmpInt = top.document.getElementById("cen").cols.indexOf(",");
+            tmpInt = parseInt(top.document.getElementById("cen").cols.substring(0, tmpInt));
+            if (tmpInt &gt; 32) {
+                top.document.getElementById("cen").cols = "32,*";
+            }
+            else {
+                top.document.getElementById("cen").cols = "300,*";
+            }
+        }
+        function mostrar() {
+            top.document.getElementById("cen").cols = "300,*";
+        }
+        function medidas() {
+            var tmpMed = wndsize();
+            if (tmpMed.width &gt; 150) {
+                document.getElementById("tbl").style.display = "";
+                document.getElementById("navegador").style.width = tmpMed.width - 48;
+                document.getElementById("navegador").style.display = "";
+            }
+            else {
+                document.getElementById("tbl").style.display = "none";
+                if (tmpMed.width != 32) {
+                    top.document.getElementById("cen").cols = "32,*";
+                }
+                document.getElementById("navegador").style.display = "none";
+            }
+            document.getElementById("espacio").style.height = tmpMed.height - 28;
+            document.getElementById("espacio").style.width = tmpMed.width;
+        }
+        function cambiar(obj) {
+            top.bod.window.location = obj.value;
+            obj.value = "*";
+        }
+        function wndsize() {
+            var w = 0; var h = 0;
+            //IE
+            if (!window.innerWidth) {
+                if (!(document.documentElement.clientWidth == 0)) {
+                    //strict mode
+                    w = document.documentElement.clientWidth; h = document.documentElement.clientHeight;
+                } else {
+                    //quirks mode
+                    w = document.body.clientWidth; h = document.body.clientHeight;
+                }
+            } else {
+                //w3c
+                w = window.innerWidth; h = window.innerHeight;
+            }
+            return { width: w, height: h };
+        }
+        window.onresize = function() { medidas(); }
+        window.onload = function() { medidas(); }
+    </script>
+</head>
+<body style="background-image: url(../../cmm/img/mnubk_mnu.jpg); background-repeat: no-repeat; font-family: Calibri; font-size: medium; color: #FFFFFF; background-color: #6699CC; " scroll="no" marginwidth="0" marginheight="0">
+    <form method="post" action="./mnu.aspx?per=772&amp;see=66" id="frm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTI1MTE1MjQ4ZGR/Y+0NNVpbpjiDgxicsEY+Ci3RLnIoHKCRYARjQwnXdA==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1370A1F6" />
+</div>
+        
+        <input id="acc" name="acc" type="hidden" />
+        <input id="per" name="per" type="hidden" />
+        <input id="see" name="see" type="hidden" />
+        <table style="width:100%; " cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td style="vertical-align:top; ">
+                    <div id="espacio" style="overflow-x: hidden; overflow-y: auto; height: 506px; width: 300px;">
+                        <div>
+                            <div style="display:block; float:left; ">
+                                <div style="height:4px; font-size:1px; "> </div>
+                                <table id="tbl" style="width:100%; " cellpadding="0" cellspacing="0">
+                                    <tbody><tr>
+                                        <td colspan="2">
+                                            <div class="dtree" style="margin-left:6px; margin-top:6px; margin-bottom:12px; font-size:12px; ">
+                                                <script type="text/javascript">
+                                                    d = new dTree('d');
+                                                    d.add(772, -1, 'GENERAL', '' , '', 'bod', '../../cmm/ico/group_edit.png','../../cmm/ico/group_edit.png'); 
+                d.icon.root = "../../cmm/ico/group_edit.png";
+d.add(4912, 772, 'DASHBOARD', '../../sln/Inmobiliario_cambio_precio/core/paginas/dsb_socovesa.aspx?user=2025' , '', 'bod', '../../cmm/ico/application_view_gallery.png','../../cmm/ico/application_view_gallery.png'); 
+d.add(4842, 772, 'Crear Cotización', '../../sln/Inmobilario_Cotizacion/Default.aspx?user=2025' , '', 'bod', '../../cmm/ico/control_play_blue.png','../../cmm/ico/control_play_blue.png'); 
+d.add(1899, 772, 'BUSCADORES', '' , '', 'bod', '../../cmm/ico/zoom_in.png','../../cmm/ico/zoom_in.png'); 
+d.add(2807, 1899, 'Crear Cliente', '../../com/mantenedor/exe.aspx?idx=2674&amp;com=8&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/pencil.png','../../cmm/ico/pencil.png'); 
+d.add(1898, 1899, 'Buscar Cotizaciones', '../../com/mantenedor/exe.aspx?idx=2577&amp;com=4&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/magnifier.png','../../cmm/ico/magnifier.png'); 
+d.add(1900, 1899, 'Buscar Negocios', '../../com/mantenedor/exe.aspx?idx=2640&amp;com=4&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/magnifier.png','../../cmm/ico/magnifier.png'); 
+d.add(1897, 1899, 'Buscar Clientes', '../../com/mantenedor/exe.aspx?idx=2576&amp;com=4&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/magnifier.png','../../cmm/ico/magnifier.png'); 
+d.add(2902, 772, 'SEGUIMIENTOS', '' , '', 'bod', '../../cmm/ico/cog_edit.png','../../cmm/ico/cog_edit.png'); 
+d.add(4863, 2902, 'Calendario Seguimiento Cotizaciones', '../../com/calendario/exe.aspx?idx=35' , '', 'bod', '../../cmm/ico/date_magnify.png','../../cmm/ico/date_magnify.png'); 
+d.add(2906, 2902, 'Cotización: Seguimientos Pendientes Hoy', '../../com/mantenedor/exe.aspx?idx=2739&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(2907, 2906, 'Cotización: Todos los Seguimientos', '../../com/mantenedor/exe.aspx?idx=2741&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/application_cascade.png','../../cmm/ico/application_cascade.png'); 
+d.add(2905, 2902, 'Negocios: Seguimientos Pendientes Hoy', '../../com/mantenedor/exe.aspx?idx=2740&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(2908, 2905, 'Negocios: Todos los Seguimientos', '../../com/mantenedor/exe.aspx?idx=2742&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/application_cascade.png','../../cmm/ico/application_cascade.png'); 
+d.add(2677, 772, 'COTIZACIONES', '' , '', 'bod', '../../cmm/ico/pdf.gif','../../cmm/ico/pdf.gif'); 
+d.add(2678, 2677, 'Del Dia', '../../com/mantenedor/exe.aspx?idx=2681&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/table.png','../../cmm/ico/table.png'); 
+d.add(2679, 2677, 'De La Semana', '../../com/mantenedor/exe.aspx?idx=2682&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/table.png','../../cmm/ico/table.png'); 
+d.add(2680, 2677, 'Del Mes', '../../com/mantenedor/exe.aspx?idx=2683&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/table.png','../../cmm/ico/table.png'); 
+d.add(2681, 2677, 'Caducadas', '../../com/mantenedor/exe.aspx?idx=2685&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/table_row_insert.png','../../cmm/ico/table_row_insert.png'); 
+d.add(1908, 772, 'NEGOCIOS', '' , '', 'bod', '../../cmm/ico/pdf.gif','../../cmm/ico/pdf.gif'); 
+d.add(5141, 1908, 'Reservas en Proceso', '../../com/mantenedor/exe.aspx?idx=3053&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/clock_play.png','../../cmm/ico/clock_play.png'); 
+d.add(4868, 1908, 'Reservas Condicionadas', '../../com/reporteadv/exe.aspx?idx=272' , '', 'bod', '../../cmm/ico/folder.png','../../cmm/ico/folder.png'); 
+d.add(4871, 4868, 'Validación Rechazada', '../../com/mantenedor/exe.aspx?idx=3653&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/bs_delete.gif','../../cmm/ico/bs_delete.gif'); 
+d.add(4876, 4868, 'Reservas No Autorizadas', '../../com/mantenedor/exe.aspx?idx=3654&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/bs_delete.gif','../../cmm/ico/bs_delete.gif'); 
+d.add(4869, 1908, 'Reservas No Condicionadas', '../../com/reporteadv/exe.aspx?idx=273' , '', 'bod', '../../cmm/ico/folder.png','../../cmm/ico/folder.png'); 
+d.add(4884, 4869, 'Reservas No Autorizadas', '../../com/mantenedor/exe.aspx?idx=3655&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/bs_delete.gif','../../cmm/ico/bs_delete.gif'); 
+d.add(2792, 1908, 'En Reserva', '../../com/mantenedor/exe.aspx?idx=2645&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(3039, 1908, 'Reservas Vencidas', '../../com/mantenedor/exe.aspx?idx=2896&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/bs_stop.gif','../../cmm/ico/bs_stop.gif'); 
+d.add(1909, 1908, 'En Promesa', '../../com/mantenedor/exe.aspx?idx=3368&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1910, 1908, 'En Escritura', '../../com/mantenedor/exe.aspx?idx=2647&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1911, 1908, 'Todas Mis Cartas Ofertas', '../../com/mantenedor/exe.aspx?idx=2648&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1912, 1908, 'Excepciones', '' , '', 'bod', '../../cmm/ico/5tool.gif','../../cmm/ico/5tool.gif'); 
+d.add(1913, 1912, 'Desistimientos', '' , '', 'bod', '../../cmm/ico/arrow_left.png','../../cmm/ico/arrow_left.png'); 
+d.add(1914, 1913, 'Pendientes', '../../com/mantenedor/exe.aspx?idx=2730&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(1915, 1913, 'Aprobados', '../../com/mantenedor/exe.aspx?idx=2732&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1916, 1913, 'Rechazados', '../../com/mantenedor/exe.aspx?idx=2731&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/delete.png','../../cmm/ico/delete.png'); 
+d.add(1917, 1912, 'Traspasos', '' , '', 'bod', '../../cmm/ico/arrow_switch.png','../../cmm/ico/arrow_switch.png'); 
+d.add(1918, 1917, 'Pendientes', '../../com/mantenedor/exe.aspx?idx=3431&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(1919, 1917, 'Aprobados', '../../com/mantenedor/exe.aspx?idx=3432&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1920, 1917, 'Rechazados', '../../com/mantenedor/exe.aspx?idx=3433&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/delete.png','../../cmm/ico/delete.png'); 
+d.add(1921, 1912, 'Cambios De Titular', '' , '', 'bod', '../../cmm/ico/arrow_refresh.png','../../cmm/ico/arrow_refresh.png'); 
+d.add(1922, 1921, 'Pendientes', '../../com/mantenedor/exe.aspx?idx=3700&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(1923, 1921, 'Aprobados', '../../com/mantenedor/exe.aspx?idx=3701&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(1924, 1921, 'Rechazados', '../../com/mantenedor/exe.aspx?idx=3702&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/cancel.png','../../cmm/ico/cancel.png'); 
+d.add(5129, 1912, 'Resciliaciones', '' , '', 'bod', '../../cmm/ico/arrow_left.png','../../cmm/ico/arrow_left.png'); 
+d.add(5130, 5129, 'Pendientes', '../../com/mantenedor/exe.aspx?idx=3434&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(5131, 5129, 'Aprobadas', '../../com/mantenedor/exe.aspx?idx=3435&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(5132, 5129, 'Rechazadas', '../../com/mantenedor/exe.aspx?idx=3436&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/delete.png','../../cmm/ico/delete.png'); 
+d.add(2691, 1908, 'PRE-APROBACIONES', '' , '', 'bod', '../../cmm/ico/folder_page.png','../../cmm/ico/folder_page.png'); 
+d.add(2692, 2691, 'Pendientes Envío', '../../com/mantenedor/exe.aspx?idx=2888&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/exclamation.png','../../cmm/ico/exclamation.png'); 
+d.add(2695, 2691, 'En Evaluación', '../../com/mantenedor/exe.aspx?idx=2889&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/resultset_next.png','../../cmm/ico/resultset_next.png'); 
+d.add(3296, 2691, 'Objetadas', '../../com/mantenedor/exe.aspx?idx=3133&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/error.png','../../cmm/ico/error.png'); 
+d.add(2693, 2691, 'Aprobadas', '../../com/mantenedor/exe.aspx?idx=2891&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/accept.png','../../cmm/ico/accept.png'); 
+d.add(2694, 2691, 'Rechazadas', '../../com/mantenedor/exe.aspx?idx=2890&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=' , '', 'bod', '../../cmm/ico/cancel.png','../../cmm/ico/cancel.png'); 
+mostrar(); 
+
+                                                    document.write(d);
+                                                    
+                                                </script><div class="dtree">
+<div class="dTreeNode"><img id="id0" src="../../cmm/ico/group_edit.png" alt="" />GENERAL</div><div id="dd0" class="clip" style="display:block;"><div class="dTreeNode"><img src="../../cmm/img/join.gif" alt="" /><img id="id1" src="../../cmm/ico/application_view_gallery.png" alt="" /><a id="sd1" class="node" href="../../sln/Inmobiliario_cambio_precio/core/paginas/dsb_socovesa.aspx?user=2025" target="bod" onclick="javascript: d.s(1);">DASHBOARD</a></div><div class="dTreeNode"><img src="../../cmm/img/join.gif" alt="" /><img id="id2" src="../../cmm/ico/control_play_blue.png" alt="" /><a id="sd2" class="nodeSel" href="../../sln/Inmobilario_Cotizacion/Default.aspx?user=2025" target="bod" onclick="javascript: d.s(2);">Crear Cotización</a></div><div class="dTreeNode"><a href="javascript: d.o(3);"><img id="jd3" src="../../cmm/img/plus.gif" alt="" /></a><img id="id3" src="../../cmm/ico/zoom_in.png" alt="" /><a href="javascript: d.o(3);" class="node">BUSCADORES</a></div><div id="dd3" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id4" src="../../cmm/ico/pencil.png" alt="" /><a id="sd4" class="node" href="../../com/mantenedor/exe.aspx?idx=2674&amp;com=8&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(4);">Crear Cliente</a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id5" src="../../cmm/ico/magnifier.png" alt="" /><a id="sd5" class="node" href="../../com/mantenedor/exe.aspx?idx=2577&amp;com=4&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(5);">Buscar Cotizaciones</a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id6" src="../../cmm/ico/magnifier.png" alt="" /><a id="sd6" class="node" href="../../com/mantenedor/exe.aspx?idx=2640&amp;com=4&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(6);">Buscar Negocios</a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id7" src="../../cmm/ico/magnifier.png" alt="" /><a id="sd7" class="node" href="../../com/mantenedor/exe.aspx?idx=2576&amp;com=4&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(7);">Buscar Clientes</a></div></div><div class="dTreeNode"><a href="javascript: d.o(8);"><img id="jd8" src="../../cmm/img/plus.gif" alt="" /></a><img id="id8" src="../../cmm/ico/cog_edit.png" alt="" /><a href="javascript: d.o(8);" class="node">SEGUIMIENTOS</a></div><div id="dd8" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id9" src="../../cmm/ico/date_magnify.png" alt="" /><a id="sd9" class="node" href="../../com/calendario/exe.aspx?idx=35" target="bod" onclick="javascript: d.s(9);">Calendario Seguimiento Cotizaciones</a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(10);"><img id="jd10" src="../../cmm/img/plus.gif" alt="" /></a><img id="id10" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd10" class="node" href="../../com/mantenedor/exe.aspx?idx=2739&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(10);">Cotización: Seguimientos Pendientes Hoy<span class="info"> (7)</span></a></div><div id="dd10" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id11" src="../../cmm/ico/application_cascade.png" alt="" /><a id="sd11" class="node" href="../../com/mantenedor/exe.aspx?idx=2741&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(11);">Cotización: Todos los Seguimientos<span class="info"> (381)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(12);"><img id="jd12" src="../../cmm/img/plusbottom.gif" alt="" /></a><img id="id12" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd12" class="node" href="../../com/mantenedor/exe.aspx?idx=2740&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(12);">Negocios: Seguimientos Pendientes Hoy<span class="info"> (0)</span></a></div><div id="dd12" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id13" src="../../cmm/ico/application_cascade.png" alt="" /><a id="sd13" class="node" href="../../com/mantenedor/exe.aspx?idx=2742&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(13);">Negocios: Todos los Seguimientos<span class="info"> (0)</span></a></div></div></div><div class="dTreeNode"><a href="javascript: d.o(14);"><img id="jd14" src="../../cmm/img/plus.gif" alt="" /></a><img id="id14" src="../../cmm/ico/pdf.gif" alt="" /><a href="javascript: d.o(14);" class="node">COTIZACIONES</a></div><div id="dd14" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id15" src="../../cmm/ico/table.png" alt="" /><a id="sd15" class="node" href="../../com/mantenedor/exe.aspx?idx=2681&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(15);">Del Dia<span class="info"> (13)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id16" src="../../cmm/ico/table.png" alt="" /><a id="sd16" class="node" href="../../com/mantenedor/exe.aspx?idx=2682&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(16);">De La Semana<span class="info"> (33)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id17" src="../../cmm/ico/table.png" alt="" /><a id="sd17" class="node" href="../../com/mantenedor/exe.aspx?idx=2683&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(17);">Del Mes<span class="info"> (82)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id18" src="../../cmm/ico/table_row_insert.png" alt="" /><a id="sd18" class="node" href="../../com/mantenedor/exe.aspx?idx=2685&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(18);">Caducadas<span class="info"> (0)</span></a></div></div><div class="dTreeNode"><a href="javascript: d.o(19);"><img id="jd19" src="../../cmm/img/plusbottom.gif" alt="" /></a><img id="id19" src="../../cmm/ico/pdf.gif" alt="" /><a href="javascript: d.o(19);" class="node">NEGOCIOS</a></div><div id="dd19" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id20" src="../../cmm/ico/clock_play.png" alt="" /><a id="sd20" class="node" href="../../com/mantenedor/exe.aspx?idx=3053&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(20);">Reservas en Proceso<span class="info"> (162)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><a href="javascript: d.o(21);"><img id="jd21" src="../../cmm/img/plus.gif" alt="" /></a><img id="id21" src="../../cmm/ico/folder.png" alt="" /><a id="sd21" class="node" href="../../com/reporteadv/exe.aspx?idx=272" target="bod" onclick="javascript: d.s(21);">Reservas Condicionadas</a></div><div id="dd21" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id22" src="../../cmm/ico/bs_delete.gif" alt="" /><a id="sd22" class="node" href="../../com/mantenedor/exe.aspx?idx=3653&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(22);">Validación Rechazada<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id23" src="../../cmm/ico/bs_delete.gif" alt="" /><a id="sd23" class="node" href="../../com/mantenedor/exe.aspx?idx=3654&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(23);">Reservas No Autorizadas<span class="info"> (0)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><a href="javascript: d.o(24);"><img id="jd24" src="../../cmm/img/plus.gif" alt="" /></a><img id="id24" src="../../cmm/ico/folder.png" alt="" /><a id="sd24" class="node" href="../../com/reporteadv/exe.aspx?idx=273" target="bod" onclick="javascript: d.s(24);">Reservas No Condicionadas</a></div><div id="dd24" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id25" src="../../cmm/ico/bs_delete.gif" alt="" /><a id="sd25" class="node" href="../../com/mantenedor/exe.aspx?idx=3655&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(25);">Reservas No Autorizadas<span class="info"> (0)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id26" src="../../cmm/ico/accept.png" alt="" /><a id="sd26" class="node" href="../../com/mantenedor/exe.aspx?idx=2645&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(26);">En Reserva<span class="info"> (72)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id27" src="../../cmm/ico/bs_stop.gif" alt="" /><a id="sd27" class="node" href="../../com/mantenedor/exe.aspx?idx=2896&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(27);">Reservas Vencidas<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id28" src="../../cmm/ico/accept.png" alt="" /><a id="sd28" class="node" href="../../com/mantenedor/exe.aspx?idx=3368&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(28);">En Promesa<span class="info"> (220)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id29" src="../../cmm/ico/accept.png" alt="" /><a id="sd29" class="node" href="../../com/mantenedor/exe.aspx?idx=2647&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(29);">En Escritura<span class="info"> (9)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id30" src="../../cmm/ico/accept.png" alt="" /><a id="sd30" class="node" href="../../com/mantenedor/exe.aspx?idx=2648&amp;com=9&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(30);">Todas Mis Cartas Ofertas<span class="info"> (705)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><a href="javascript: d.o(31);"><img id="jd31" src="../../cmm/img/plus.gif" alt="" /></a><img id="id31" src="../../cmm/ico/5tool.gif" alt="" /><a href="javascript: d.o(31);" class="node">Excepciones</a></div><div id="dd31" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(32);"><img id="jd32" src="../../cmm/img/plus.gif" alt="" /></a><img id="id32" src="../../cmm/ico/arrow_left.png" alt="" /><a href="javascript: d.o(32);" class="node">Desistimientos</a></div><div id="dd32" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id33" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd33" class="node" href="../../com/mantenedor/exe.aspx?idx=2730&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(33);">Pendientes<span class="info"> (2)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id34" src="../../cmm/ico/accept.png" alt="" /><a id="sd34" class="node" href="../../com/mantenedor/exe.aspx?idx=2732&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(34);">Aprobados<span class="info"> (27)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id35" src="../../cmm/ico/delete.png" alt="" /><a id="sd35" class="node" href="../../com/mantenedor/exe.aspx?idx=2731&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(35);">Rechazados<span class="info"> (1)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(36);"><img id="jd36" src="../../cmm/img/plus.gif" alt="" /></a><img id="id36" src="../../cmm/ico/arrow_switch.png" alt="" /><a href="javascript: d.o(36);" class="node">Traspasos</a></div><div id="dd36" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id37" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd37" class="node" href="../../com/mantenedor/exe.aspx?idx=3431&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(37);">Pendientes<span class="info"> (3)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id38" src="../../cmm/ico/accept.png" alt="" /><a id="sd38" class="node" href="../../com/mantenedor/exe.aspx?idx=3432&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(38);">Aprobados<span class="info"> (12)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id39" src="../../cmm/ico/delete.png" alt="" /><a id="sd39" class="node" href="../../com/mantenedor/exe.aspx?idx=3433&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(39);">Rechazados<span class="info"> (0)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(40);"><img id="jd40" src="../../cmm/img/plus.gif" alt="" /></a><img id="id40" src="../../cmm/ico/arrow_refresh.png" alt="" /><a href="javascript: d.o(40);" class="node">Cambios De Titular</a></div><div id="dd40" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id41" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd41" class="node" href="../../com/mantenedor/exe.aspx?idx=3700&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(41);">Pendientes<span class="info"> (4)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id42" src="../../cmm/ico/accept.png" alt="" /><a id="sd42" class="node" href="../../com/mantenedor/exe.aspx?idx=3701&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(42);">Aprobados<span class="info"> (38)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id43" src="../../cmm/ico/cancel.png" alt="" /><a id="sd43" class="node" href="../../com/mantenedor/exe.aspx?idx=3702&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(43);">Rechazados<span class="info"> (0)</span></a></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><a href="javascript: d.o(44);"><img id="jd44" src="../../cmm/img/plusbottom.gif" alt="" /></a><img id="id44" src="../../cmm/ico/arrow_left.png" alt="" /><a href="javascript: d.o(44);" class="node">Resciliaciones</a></div><div id="dd44" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id45" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd45" class="node" href="../../com/mantenedor/exe.aspx?idx=3434&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(45);">Pendientes<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id46" src="../../cmm/ico/accept.png" alt="" /><a id="sd46" class="node" href="../../com/mantenedor/exe.aspx?idx=3435&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(46);">Aprobadas<span class="info"> (1)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/line.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id47" src="../../cmm/ico/delete.png" alt="" /><a id="sd47" class="node" href="../../com/mantenedor/exe.aspx?idx=3436&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(47);">Rechazadas<span class="info"> (1)</span></a></div></div></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><a href="javascript: d.o(48);"><img id="jd48" src="../../cmm/img/plusbottom.gif" alt="" /></a><img id="id48" src="../../cmm/ico/folder_page.png" alt="" /><a href="javascript: d.o(48);" class="node">PRE-APROBACIONES</a></div><div id="dd48" class="clip" style="display:none;"><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id49" src="../../cmm/ico/exclamation.png" alt="" /><a id="sd49" class="node" href="../../com/mantenedor/exe.aspx?idx=2888&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(49);">Pendientes Envío<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id50" src="../../cmm/ico/resultset_next.png" alt="" /><a id="sd50" class="node" href="../../com/mantenedor/exe.aspx?idx=2889&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(50);">En Evaluación<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id51" src="../../cmm/ico/error.png" alt="" /><a id="sd51" class="node" href="../../com/mantenedor/exe.aspx?idx=3133&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(51);">Objetadas<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/join.gif" alt="" /><img id="id52" src="../../cmm/ico/accept.png" alt="" /><a id="sd52" class="node" href="../../com/mantenedor/exe.aspx?idx=2891&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(52);">Aprobadas<span class="info"> (0)</span></a></div><div class="dTreeNode"><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/empty.gif" alt="" /><img src="../../cmm/img/joinbottom.gif" alt="" /><img id="id53" src="../../cmm/ico/cancel.png" alt="" /><a id="sd53" class="node" href="../../com/mantenedor/exe.aspx?idx=2890&amp;com=0&amp;cnt=1&amp;conbar=0&amp;conalt=" target="bod" onclick="javascript: d.s(53);">Rechazadas<span class="info"> (0)</span></a></div></div></div></div></div>                                                
+                                                <script type="text/javascript">
+                                                    var tmpPer = '772';
+                                                    var tmpSee = '66';
+                                                    var tmpRee = '2906|2739,2907|2741,2905|2740,2908|2742,2678|2681,2679|2682,2680|2683,2681|2685,5141|3053,4871|3653,4876|3654,4884|3655,2792|2645,3039|2896,1909|3368,1910|2647,1911|2648,1914|2730,1915|2732,1916|2731,1918|3431,1919|3432,1920|3433,1922|3700,1923|3701,1924|3702,5130|3434,5131|3435,5132|3436,2692|2888,2695|2889,3296|3133,2693|2891,2694|2890,';
+                                                    
+                                                    $.ajax({
+                                                        url: "cnt.aspx?per=" + tmpPer + "&amp;see=" + tmpSee + "&amp;ree=" + tmpRee,
+                                                        cache: false,
+                                                        processData: false,
+                                                        contentType: false,
+                                                        type: 'POST',
+                                                        async: true,
+                                                        success: function (result)
+                                                        {
+                                                            var jsonContador = JSON.parse(result);
+                                                            eval(jsonContador.SetInfo);
+
+                                                            setInterval(function () { ActualizarContador(); }, 30000);
+                                                        }
+                                                    });
+
+                                                    function ActualizarContador()
+                                                    {
+                                                        $.ajax({
+                                                            url: "ref.aspx",
+                                                            cache: false,
+                                                            success: function (result)
+                                                            {
+                                                                if (result != "null")
+                                                                {
+                                                                    var json = JSON.parse(result);
+                                                                    console.log("Actualizando Contadores..");
+                                                                    $.each(json, function (i, item) {
+                                                                        d.setInfo(item.Column1, item.Column2);
+                                                                    });
+                                                                }
+                                                                else
+                                                                {
+                                                                    console.log("Sesion nula de contadores...");
+                                                                }
+
+                                                            }
+                                                        });
+                                                    }
+
+                                                </script>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <div style="text-align:right; width:100%; position:absolute; top:0px; ">
+            <img onclick="visibilidad()" src="../../cmm/ico/application_side_expand.png" alt="" style="cursor:pointer; padding:4px 20px 4px 4px; " />
+        </div>
+        <div style="height:28px; background-image:url('../../cmm/img/headerfondo.png'); background-repeat:repeat-x; display:none; " id="esp_navegador">
+            <div id="explorador">
+                <table>
+                    <tbody><tr>
+                        <td><img src="../../cmm/ico/magnifier.png" alt="" style="padding-left:4px; " /></td>
+                        <td>
+                            <select id="navegador" style="width: 252px; font-size: 10px;" onchange="cambiar(this)"><option value="*"></option><optgroup label="Buscar"><option value="../../com/mantenedor/exe.aspx?idx=2577&amp;com=4&amp;conbar=0&amp;conalt=">Buscar Cotizaciones</option><option value="../../com/mantenedor/exe.aspx?idx=2640&amp;com=4&amp;conbar=0&amp;conalt=">Buscar Negocios</option><option value="../../com/mantenedor/exe.aspx?idx=2576&amp;com=4&amp;conbar=0&amp;conalt=">Buscar Clientes</option></optgroup><optgroup label="Crear"><option value="../../com/mantenedor/exe.aspx?idx=2674&amp;com=8&amp;conbar=0&amp;conalt=">Crear Cliente</option></optgroup></select>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </form>
+
+
+</body></html>
